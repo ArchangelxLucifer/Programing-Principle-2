@@ -10,11 +10,11 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
-            string massive = Console.ReadLine(); 
-            string[] a = massive.Split(); 
-            int[] b = new int[n];
-            for(int i = 0; i < n; i++)
+            int n = int.Parse(Console.ReadLine()); // считываем количество чисел
+            string massive = Console.ReadLine(); // считываем строку
+            string[] a = massive.Split(); // добавляем подстроки в массив а
+            int[] b = new int[n]; // создаем массив, в котором хранятся n чисел 
+            for(int i = 0; i < n; i++) // пробегаемся по циклу for
             {
                 b[i] = int.Parse(a[i]); // Конвертируем элемменты массива а на тип int и перекидывем в массив b
             }
@@ -22,7 +22,7 @@ namespace Task1
             for(int i = 0; i < n; i++)
             {
                 int c = 0;
-                if (b[i] == 1)
+                if (b[i] == 1) 
                 {
                     b[i] = 0;
                 }
@@ -50,7 +50,7 @@ namespace Task1
             {
                 if (b[i] != 0)
                 {
-                    Console.Write(b[i] + " ");
+                    Console.Write(b[i] + " "); // выводим простые числа
                 }
             }
         }
